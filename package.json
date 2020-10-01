@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/JenniSvensson/Boulder-log-server#readme",
   "dependencies": {
-    "apollo-server": "^2.18.1",
+    "apollo-server-express": "^2.18.1",
     "dotenv": "^8.2.0",
     "esm": "^3.2.25",
     "graphql": "^15.3.0"
