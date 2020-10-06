@@ -1,5 +1,8 @@
-import { ApolloServer, gql } from "apollo-server-express";
+import { ApolloServer } from "apollo-server-express";
 import express from "express";
+import typeDefs from "./typeDefs";
+import resolvers from "./resolvers";
+const PORT = 4000 || process.env;
 const app = express();
 
 app.disable("x-powered-by");
@@ -39,6 +42,8 @@ const server = new ApolloServer({
 
 server.applyMiddleware({ app });
 
-app.listen({ port: 4000 }, () =>
-  console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
+app.listen({ port: PORT }, () =>
+  console.log(
+    `🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`
+  )
 );
